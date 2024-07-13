@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import  { useContext } from "react";
 import "./FoodDisplay.css";
 import { StoreContext } from "../../context/StoreContext";
 import { assets } from "../../assets/assets";
 
-const FoodDisplay = () => {
+const FoodDisplay = ({category}) => {
   const { food_list, cartItems, addToCart, removeFromCart } = useContext(StoreContext);
   console.log("🚀 ~ FoodDisplay ~ food_list:", food_list);
 
@@ -11,8 +11,11 @@ const FoodDisplay = () => {
     <div className="food-display">
       <h2>Top dishes near you</h2>
       <div className="food-display-list">
-        {food_list.map((item) => (
-          <div key={item._id} className="food-item">
+        
+      {food_list
+          .filter(item => category === "All" || category === item.category)
+          .map(item => (
+            <div key={item._id} className="food-item">
             <div className="food-item-img-container">
               <img className="food-item-image" src={item.image} alt={item.name} />
               {!cartItems[item._id] ? (
@@ -48,6 +51,8 @@ const FoodDisplay = () => {
               </div>
             </div>
           </div>
+         
+          
         ))}
       </div>
     </div>

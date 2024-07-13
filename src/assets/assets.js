@@ -8,6 +8,8 @@ import pizza from "./pizza.png";
 import add from "./add.png";
 import plus from "./plus.png";
 import minus from "./minus.png";
+import google from "./google.png";
+import app from "./app.png";
 export const assets = {
   food,
   cart,
@@ -15,6 +17,8 @@ export const assets = {
   add,
   plus,
   minus,
+  google,
+  app,
 };
 export const menu_list = [
   { menu_name: "Salad", menu_image: sandwich },
@@ -29,25 +33,25 @@ export const menu_list = [
 export const food_list = [
   {
     _id: "1",
-    name: "Greek salad",
+    name: "Burger",
     image: burger,
     price: 12,
     description:
       "Food provides essential nutrients for overall health and well-being.",
-    category: "Salad",
+    category: "Burger",
   },
   {
     _id: "2",
-    name: "Greek salad",
+    name: "Sandwich",
     image: sandwich,
     price: 12,
     description:
       "Food provides essential nutrients for overall health and well-being.",
-    category: "Salad",
+    category: "Sandwich",
   },
   {
     _id: "3",
-    name: "Greek salad",
+    name: "Mixed salad",
     image: salad,
     price: 12,
     description:
@@ -56,12 +60,12 @@ export const food_list = [
   },
   {
     _id: "4",
-    name: "Greek salad",
+    name: "Pizza",
     image: pizza,
     price: 12,
     description:
       "Food provides essential nutrients for overall health and well-being.",
-    category: "Salad",
+    category: "Pizza",
   },
   {
     _id: "5",
@@ -74,11 +78,65 @@ export const food_list = [
   },
   {
     _id: "6",
-    name: "Greek salad",
+    name: "Burger",
     image: burger,
     price: 12,
     description:
       "Food provides essential nutrients for overall health and well-being.",
+    category: "Burger",
+  },
+  {
+    _id: "7",
+    name: "Burger",
+    image: burger,
+    price: 12,
+    description:
+      "Food provides essential nutrients for overall health and well-being.",
+    category: "Burger",
+  },
+  {
+    _id: "8",
+    name: "Sandwich",
+    image: sandwich,
+    price: 12,
+    description:
+      "Food provides essential nutrients for overall health and well-being.",
+    category: "Sandwich",
+  },
+  {
+    _id: "9",
+    name: "Mixed salad",
+    image: salad,
+    price: 12,
+    description:
+      "Food provides essential nutrients for overall health and well-being.",
     category: "Salad",
+  },
+  {
+    _id: "10",
+    name: "Pizza",
+    image: pizza,
+    price: 12,
+    description:
+      "Food provides essential nutrients for overall health and well-being.",
+    category: "Pizza",
+  },
+  {
+    _id: "11",
+    name: "Greek salad",
+    image: salad,
+    price: 12,
+    description:
+      "Food provides essential nutrients for overall health and well-being.",
+    category: "Salad",
+  },
+  {
+    _id: "12",
+    name: "Burger",
+    image: burger,
+    price: 12,
+    description:
+      "Food provides essential nutrients for overall health and well-being.",
+    category: "Burger",
   },
 ];
