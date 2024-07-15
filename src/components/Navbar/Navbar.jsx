@@ -9,7 +9,7 @@ function Navbar({setShowLogin}) {
   return (
     <div className='navbar'>
 
-      <img src={assets.food} alt='Food' className='logo'/>
+      <Link to="/home"><img src={assets.food} alt='Food' className='logo'/></Link>
       <ul className="navbar-menu">
       <li onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}>
   <Link to="/home">Home</Link>
@@ -19,7 +19,7 @@ function Navbar({setShowLogin}) {
       <div className="navbar-right">
         <img src={assets.search} alt='search' className='icon'/>
         <div className="navbar-search-icon">
-          <img src={assets.cart} alt='cart' className='icon'/>
+          <Link to ="/cart"><img src={assets.cart} alt='cart' className='icon'/></Link>
           <div className='dot'></div>
          
          

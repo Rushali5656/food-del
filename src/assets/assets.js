@@ -10,6 +10,7 @@ import plus from "./plus.png";
 import minus from "./minus.png";
 import google from "./google.png";
 import app from "./app.png";
+import cross from "./cross.png";
 export const assets = {
   food,
   cart,
@@ -19,6 +20,7 @@ export const assets = {
   minus,
   google,
   app,
+  cross,
 };
 export const menu_list = [
   { menu_name: "Salad", menu_image: sandwich },
