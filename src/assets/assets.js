@@ -11,6 +11,7 @@ import minus from "./minus.png";
 import google from "./google.png";
 import app from "./app.png";
 import cross from "./cross.png";
+import tick from "./thank.gif";
 export const assets = {
   food,
   cart,
@@ -21,6 +22,7 @@ export const assets = {
   google,
   app,
   cross,
+  tick,
 };
 export const menu_list = [
   { menu_name: "Salad", menu_image: sandwich },

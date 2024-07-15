@@ -24,21 +24,21 @@ const PlaceOrder = () => {
      <div className="place-order-right"><div className="cart-total">
           <h2>Cart Totals</h2>
           <div>
-            <div className="cart-total-details">
+          <div className="cart-total-details">
               <p>Subtotal</p>
               <p>${getTotalCartAmount()}</p>
             </div>
             <hr />
             <div className="cart-total-details">
               <p>Delivery Fee</p>
-              <p>{80}</p>
+              <p>{getTotalCartAmount()===0?0:80}</p>
             </div>
             <div className="cart-total-details">
               <b>Total</b>
-              <b>${getTotalCartAmount() + 80}</b>
+              <b>${getTotalCartAmount()===0?0:getTotalCartAmount() + 80}</b>
             </div>
           </div>
-          <button onClick={() => navigate('/order')}>Proceed To Payment Page</button>
+          <button onClick={() => navigate('/payment')}>Proceed To Payment Page</button>
         </div></div>
 
     </form>

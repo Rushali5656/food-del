@@ -8,6 +8,8 @@ import { useState } from 'react'
 import LoginPopup from './components/LoginPopup/LoginPopup'
 import Cart from './components/Cart/Cart'
 import PlaceOrder from './components/PlaceOrder/PlaceOrder'
+import OrderSummary from './components/OrderSummary/OrderSummary'
+import Payment from './components/Payment/Payment'
 
 function App() {
   const[showLogin,setShowLogin]=useState(false)
@@ -22,6 +24,9 @@ function App() {
         <Route path='/home' element={<Home/>} />
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/order' element={<PlaceOrder/>}/>
+        <Route path='/payment' element={<Payment/>}/>
+
+        <Route path='/order-summary' element={<OrderSummary/>}/>
 
       </Routes>
       <Footer/>
