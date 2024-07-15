@@ -12,6 +12,9 @@ import google from "./google.png";
 import app from "./app.png";
 import cross from "./cross.png";
 import tick from "./thank.gif";
+import logout from "./logout.png"
+import bag from "./bag.png"
+import profile from "./profile.png"
 export const assets = {
   food,
   cart,
@@ -23,6 +26,9 @@ export const assets = {
   app,
   cross,
   tick,
+  logout,
+  bag,
+  profile
 };
 export const menu_list = [
   { menu_name: "Salad", menu_image: sandwich },
