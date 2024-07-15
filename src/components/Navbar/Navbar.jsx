@@ -4,7 +4,7 @@ import { assets } from '../../assets/assets'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-function Navbar() {
+function Navbar({setShowLogin}) {
   const [menu,setMenu]=useState("home")
   return (
     <div className='navbar'>
@@ -24,7 +24,7 @@ function Navbar() {
          
          
         </div>
-        <button>Sign In</button>
+        <button onClick={()=>setShowLogin(true)}>Sign In</button>
 
       </div>
     </div>
