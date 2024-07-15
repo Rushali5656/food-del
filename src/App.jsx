@@ -11,6 +11,7 @@ function App() {
     <>
     <div>
       <div className='app'><Navbar/></div>
+      <Home/>
       <Routes>
         <Route path='/home' element={<Home/>} />
         <Route path='/cart' element={<Cart/>}/>

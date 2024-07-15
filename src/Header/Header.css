@@ -1,12 +1,13 @@
 .header {
   height: 34vw;
-  width: 1350px;
-  margin: 30px auto; /* Removed duplicate margin property and added unit */
+  width: 1050px;
+  margin: 0px 150px 0px 150px; /* Removed duplicate margin property and added unit */
   background: url("/header.png") no-repeat center center;
   background-size: cover;
   position: relative;
   box-sizing: border-box;
   border-radius: 20px;
+  /* padding: 0 150px; */
 }
 
 .header-contents {

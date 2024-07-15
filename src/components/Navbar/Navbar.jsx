@@ -13,9 +13,9 @@ function Navbar() {
       <ul className="navbar-menu">
       <li onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}>
   <Link to="/home">Home</Link>
-</li>      <li  onClick={()=>setMenu("menu")} className={menu==="menu"?"active":""}>Menu</li>
-      <li onClick={()=>setMenu("mobile-app")} className={menu==="mobile-app"?"active":""}>Mobile-App</li>
-      <li onClick={()=>setMenu("contact-us")} className={menu==="contact-us"?"active":""}>Contact Us</li></ul>
+</li>      <a href="#explore-menu"  onClick={()=>setMenu("menu")} className={menu==="menu"?"active":""}>Menu</a>
+      <a href="#app-download" onClick={()=>setMenu("mobile-app")} className={menu==="mobile-app"?"active":""}>Mobile-App</a>
+      <a href="#footer" onClick={()=>setMenu("contact-us")} className={menu==="contact-us"?"active":""}>Contact Us</a></ul>
       <div className="navbar-right">
         <img src={assets.search} alt='search' className='icon'/>
         <div className="navbar-search-icon">
