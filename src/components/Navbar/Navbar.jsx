@@ -15,7 +15,7 @@ function Navbar({setShowLogin}) {
       <ul className="navbar-menu">
       <li onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}>
   <Link to="/home">Home</Link>
-</li>      <a href="#explore-menu"  onClick={()=>setMenu("menu")} className={menu==="menu"?"active":""}>Menu</a>
+</li><a href="#explore-menu"  onClick={()=>setMenu("menu")} className={menu==="menu"?"active":""}>Menu</a>
       <a href="#app-download" onClick={()=>setMenu("mobile-app")} className={menu==="mobile-app"?"active":""}>Mobile-App</a>
       <a href="#footer" onClick={()=>setMenu("contact-us")} className={menu==="contact-us"?"active":""}>Contact Us</a></ul>
       <div className="navbar-right">
@@ -34,8 +34,6 @@ function Navbar({setShowLogin}) {
             <li><img src={assets.logout} alt="" /><p>LogOut</p></li>
           </ul>
           </div>}
-        
-
       </div>
     </div>
   )
