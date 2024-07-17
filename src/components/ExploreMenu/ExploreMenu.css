@@ -11,7 +11,7 @@
 }
 .explore-menu-text {
   max-width: 60%;
-  columns: #808080;
+  color: #808080;
 }
 
 .explore-menu-list {
@@ -22,9 +22,10 @@
   text-align: center;
   margin: 20px 0px;
   overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 .explore-menu-list-item img {
-  /* width: 7.5 vw; */
   height: 10vw;
   width: 10vw;
   cursor: pointer;
@@ -37,11 +38,6 @@
   font-size: max(1.4vw, 16px);
   cursor: pointer;
 }
-
-.explore-menu-list {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
 .explore-menu hr {
   margin: 10px 0px;
   height: 2px;
@@ -51,4 +47,14 @@
 .explore-menu-list-item .active {
   box-shadow: 0 0 5px tomato;
   padding: 2px;
+}
+
+@media (max-width: 750px) {
+  .explore-menu {
+    padding: 0px 20px;
+    padding-left: 20px;
+  }
+  .explore-menu-text {
+    max-width: 100%;
+  }
 }
