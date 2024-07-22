@@ -6,9 +6,19 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
   const url = "https://backend-for-food-del.onrender.com";
-  const [token, setToken] = useState("");
-  console.log(token)
+  
+  // Initialize token from localStorage
+  const [token, setToken] = useState(localStorage.getItem("token") || "");
   const [food_list, setFoodList] = useState([]);
+
+  // Update localStorage when token changes
+  useEffect(() => {
+    if (token) {
+      localStorage.setItem("token", token);
+    } else {
+      localStorage.removeItem("token");
+    }
+  }, [token]);
 
   const addToCart = async (itemId) => {
     const updatedCartItems = { ...cartItems, [itemId]: (cartItems[itemId] || 0) + 1 };
@@ -68,24 +78,24 @@ const StoreContextProvider = (props) => {
     }
   };
 
-  // const loadCartData = async (token) => {
-  //   if (token) {
-  //     try {
-  //       const response = await axios.post(url + "/api/cart/get", {}, { headers: { token } });
-  //       setCartItems(response.data.cartData);
-  //     } catch (error) {
-  //       console.error("Error loading cart data:", error);
-  //     }
-  //   }
-  // };
+  const loadCartData = async (token) => {
+    if (token) {
+      try {
+        const response = await axios.post(url + "/api/cart/get", {}, { headers: { token } });
+        setCartItems(response.data);
+      } catch (error) {
+        console.error("Error loading cart data:", error);
+      }
+    }
+  };
 
   useEffect(() => {
     fetchFoodList();
   }, []);
 
-  // useEffect(() => {
-  //   loadCartData(token);
-  // }, [token]);
+  useEffect(() => {
+    loadCartData(token);
+  }, [token]);
 
   const contextValue = {
     food_list,
